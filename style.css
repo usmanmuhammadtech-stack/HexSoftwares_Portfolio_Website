@@ -1,0 +1,193 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(-45deg, #667eea, #764ba2, #6a11cb, #2575fc);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  color: white;
+}
+
+/* ANIMATED BACKGROUND */
+@keyframes gradientBG {
+  0% {background-position: 0%}
+  50% {background-position: 100%}
+  100% {background-position: 0%}
+}
+
+/* NAVBAR */
+.navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+  z-index: 1000;
+}
+
+/* LOGO */
+.logo {
+  color: #00ffcc;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logo:hover {
+  text-shadow: 0 0 10px #00ffcc;
+}
+
+/* NAV LINKS */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  position: relative;
+  transition: 0.3s;
+}
+
+/* UNDERLINE */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background: #00ffcc;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* GLOW */
+.nav-links a:hover {
+  color: #00ffcc;
+  text-shadow: 0 0 8px #00ffcc;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+/* PROFILE IMAGE */
+.profile img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 0 25px #fff;
+  transition: 0.3s;
+}
+
+.profile img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 40px #00ffcc;
+}
+
+/* TYPING EFFECT */
+.typing {
+  border-right: 2px solid white;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  margin: auto;
+  animation: typing 3s steps(30) forwards, blink 0.7s infinite;
+}
+
+@keyframes typing {
+  to { width: 280px; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #00ffcc;
+  color: black;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+/* GLASS CARD */
+.glass {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(15px);
+}
+
+/* CARD */
+.card {
+  width: 80%;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* SKILLS */
+.skills span {
+  background: #00ffcc;
+  color: black;
+  padding: 8px 15px;
+  margin: 5px;
+  border-radius: 20px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.skills span:hover {
+  transform: scale(1.2);
+}
+
+/* PROJECTS */
+.projects {
+  display: flex;
+  gap: 20px;
+}
+
+.project {
+  flex: 1;
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-10px) scale(1.05);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+}
